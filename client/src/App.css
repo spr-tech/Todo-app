@@ -1,15 +1,108 @@
-body { font-family: system-ui, sans-serif; background: #f4f4f4; }
-.app {
-  max-width: 480px;
-  margin: 40px auto;
-  background: #fff;
-  padding: 24px;
-  border-radius: 8px;
+* { box-sizing: border-box; }
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  background: linear-gradient(160deg, #1e1b4b 0%, #312e81 45%, #4c1d95 100%);
+  min-height: 100vh;
+  margin: 0;
+  padding: 24px 16px;
+  color: #1e1b2e;
 }
-form { display: flex; gap: 8px; margin-bottom: 16px; }
-input[type="text"], form input { flex: 1; padding: 8px; }
-button { padding: 8px 12px; cursor: pointer; }
-ul { list-style: none; padding: 0; }
-li { display: flex; align-items: center; gap: 8px; padding: 6px 0; }
-li span { flex: 1; }
-.done { text-decoration: line-through; color: #999; }
+
+.app {
+  max-width: 520px;
+  margin: 48px auto;
+  background: #ffffff;
+  padding: 36px 32px 40px;
+  border-radius: 20px;
+  box-shadow: 0 24px 60px rgba(15, 12, 41, 0.35);
+}
+
+h1 {
+  margin: 0 0 28px;
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  color: #1e1b4b;
+}
+
+form { display: flex; gap: 10px; margin-bottom: 28px; }
+
+form input {
+  flex: 1;
+  padding: 13px 16px;
+  font-size: 15px;
+  border: 1.5px solid #e2e0f0;
+  border-radius: 11px;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+}
+
+form input:focus {
+  border-color: #6d5cf0;
+  box-shadow: 0 0 0 3px rgba(109, 92, 240, 0.15);
+}
+
+form button {
+  padding: 13px 24px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  background: #5b4bd8;
+  border: none;
+  border-radius: 11px;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+
+form button:hover { background: #4a3bc4; }
+
+ul { list-style: none; padding: 0; margin: 0; }
+
+li {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  background: #faf9ff;
+  border: 1px solid #eeecfa;
+  border-radius: 13px;
+  transition: background 0.18s, transform 0.12s;
+}
+
+li:hover { background: #f4f2ff; transform: translateX(2px); }
+
+li input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #5b4bd8;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+li span { flex: 1; font-size: 15.5px; color: #2c2a3f; }
+
+li button {
+  padding: 7px 15px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #b4304a;
+  background: #fdeef1;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+
+li button:hover { background: #fbdde3; }
+
+.done { text-decoration: line-through; color: #a9a6bd; }
+
+p {
+  text-align: center;
+  color: #8b88a3;
+  font-size: 14.5px;
+  padding: 28px 0 8px;
+  margin: 0;
+}
